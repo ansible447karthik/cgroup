@@ -1,0 +1,7 @@
+- hosts: localhost
+  ssh_connection: local
+  tasks:
+          - name: copy fstab file
+            copy:
+                  src: /etc/fstab
+                  dest: /var/tmp/fstab
