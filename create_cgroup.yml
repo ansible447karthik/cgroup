@@ -1,0 +1,5 @@
+- hosts: localhost
+  become: true
+  tasks:
+    - raw: cgcreate -a mathew:mathew -t mathew:mathew -g cpuacct,memory,pids:ex447_stats
+
