@@ -1,0 +1,8 @@
+---
+
+- name: cgexec play
+  hosts: localhost
+  become: true
+  tasks:
+    - name: cgexec on install.yml
+      command: cgexec -g cpuacct,memory,pids:ex447_stats ansible-playbook install.yml

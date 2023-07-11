@@ -1,0 +1,8 @@
+---
+
+- name: control group create
+  hosts: localhost
+  become: true
+  tasks:
+    - name: creatin control group
+      shell: cgcreate -a rtc:rtc -t rtc:rtc -g cpuacct,memory,pids:ex447_stats
